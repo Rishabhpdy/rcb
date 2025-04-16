@@ -1,0 +1,318 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff; /* Pure white background */
+  color: #333;             /* Dark text for readability */
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #FFF5E7;  /* Light beige */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #7f9aaf; /* Soft blue-gray accent */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  background: url('coffee-hero.jpg') no-repeat center center/cover;
+/* Media Queries */
+  @media (max-width: 768px) {
+    min-height: 50vh;
+  }
+  @media (max-width: 480px) {
+    min-height: 40vh;
+  }
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Light overlay to brighten the background image */
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #333;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Button */
+.button {
+  background-color: #AEDFF7; /* Light pastel blue */
+  color: #333;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #91CDE0;
+}
+
+/* Menu Section */
+.menu {
+  padding: 2rem;
+  text-align: center;
+  background-color: #F7FAFC; /* Very light background */
+  
+  /* Fade in animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+  animation-delay: 0s;
+}
+
+.menu h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.menu-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-3px);
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+  font-size: 1rem;
+}
+
+/* Specials Section */
+.specials {
+  padding: 2rem;
+  text-align: center;
+  background-color: #F7FAFC;
+  
+  /* Fade in animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.9s;
+}
+
+.specials h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.specials-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.special-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.special-item:hover {
+  transform: translateY(-3px);
+}
+
+.special-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.special-item p {
+  font-size: 1rem;
+}
+
+/* About Section - Shop Information */
+.about {
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+  
+  /* Fade in animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.3s;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Shop History Section */
+.shop-history {
+  padding: 3rem 2rem;
+  background-color: #F7FAFC;
+  
+  /* Fade in animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.6s;
+}
+
+.shop-history h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.shop-history p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #F7FAFC;
+  
+  /* Fade in animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+  animation-delay: 1.5s;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: #FFF5E7;
+  color: #333;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-top: 1px solid #e4e4e4;
+}
+
+footer p {
+  margin: 0.5rem;
+}
+
+/* Fade In Animation Keyframes */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
